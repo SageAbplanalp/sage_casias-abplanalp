@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <rect width="1000" height="700" fill="#fef3c7"/>
+  <rect x="170" y="160" width="660" height="380" rx="26" fill="#ffffff" stroke="#f59e0b" stroke-width="10"/>
+  <path d="M210 220 L500 390 L790 220" fill="none" stroke="#f59e0b" stroke-width="10"/>
+  <circle cx="500" cy="120" r="55" fill="#2563eb" opacity="0.9"/>
+  <text x="500" y="615" font-size="52" text-anchor="middle" fill="#92400e" font-family="Arial">CONTACT FORM</text>
+</svg>

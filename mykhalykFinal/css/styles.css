@@ -1,0 +1,330 @@
+/* Global reset and body styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2933;
+    background-color: #f5f7fa;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: #0b5ed7;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Header and navigation */
+.site-header {
+    background-color: #0f172a;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.7rem;
+    letter-spacing: 0.5px;
+}
+
+.site-tag {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-list a {
+    color: #ffffff;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus,
+.nav-list .active {
+    background-color: #2563eb;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* Hero area */
+.hero {
+    min-height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-hero {
+    background-image: url("../images/soccer-field.svg");
+}
+
+.overlay {
+    min-height: 70vh;
+    background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65));
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: #ffffff;
+    max-width: 700px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.button {
+    display: inline-block;
+    background-color: #f59e0b;
+    color: #111827;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+    opacity: 0.9;
+    transform: scale(1.02);
+    text-decoration: none;
+}
+
+/* Card layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card,
+.tip-card {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+}
+
+.card h3,
+.tip-card h4 {
+    margin: 1rem 0 0.5rem;
+}
+
+.alt-section {
+    background-color: #eaf1fb;
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.image-stack,
+.feature-image {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.check-list {
+    margin-top: 1rem;
+    padding-left: 1.25rem;
+}
+
+.check-list li {
+    margin-bottom: 0.5rem;
+}
+
+.links-box {
+    background-color: #ffffff;
+    border-left: 6px solid #2563eb;
+    padding: 1.25rem;
+    border-radius: 8px;
+}
+
+/* Page banners */
+.page-banner {
+    color: #ffffff;
+    padding: 5rem 0;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+}
+
+.soccer-banner {
+    background-image: linear-gradient(rgba(2, 44, 34, 0.65), rgba(2, 44, 34, 0.65)), url("../images/goal.svg");
+}
+
+.volleyball-banner {
+    background-image: linear-gradient(rgba(32, 45, 84, 0.7), rgba(32, 45, 84, 0.7)), url("../images/serve.svg");
+}
+
+.contact-banner {
+    background-image: linear-gradient(rgba(60, 31, 5, 0.7), rgba(60, 31, 5, 0.7)), url("../images/contact.svg");
+}
+
+.page-banner h2 {
+    font-size: 2.7rem;
+    margin-bottom: 0.75rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Form styling */
+.form-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+}
+
+.contact-form label,
+.contact-form legend {
+    display: block;
+    font-weight: bold;
+    margin: 0.8rem 0 0.35rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
+.contact-form fieldset {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form fieldset {
+    margin-top: 0.8rem;
+}
+
+.contact-form fieldset label {
+    font-weight: normal;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-right: 1rem;
+}
+
+.contact-form input[type="radio"] {
+    width: auto;
+    padding: 0;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button {
+    margin-top: 1rem;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 1.25rem 0;
+    margin-top: 2rem;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-wrap,
+    .split-layout,
+    .form-layout,
+    .footer-flex {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .hero-content h2,
+    .page-banner h2,
+    .section-title {
+        font-size: 2rem;
+    }
+}
