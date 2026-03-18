@@ -1,0 +1,100 @@
+<!--
+  Contact page for Tennis Insights.
+  This page invites visitors to join the community and provides a simple
+  form for collecting basic information.  The form does not send data
+  to a server; instead it displays a confirmation message using a
+  small JavaScript function.  Comments throughout clarify the
+  structure and explain the purpose of each element.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join the Tennis Community | Tennis Insights</title>
+    <!-- Link to the shared stylesheet.  Use a relative path because this
+         page lives inside the pages subfolder. -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Skip link improves accessibility for screen readers and keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Main navigation -->
+    <header>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="getting-started.html">Getting&nbsp;Started</a></li>
+          <li><a href="training.html">Training&nbsp;&amp;&nbsp;Techniques</a></li>
+          <li><a href="contact.html" class="active">Join&nbsp;the&nbsp;Community</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content">
+      <h1>Join the Tennis Community</h1>
+      <!-- Brief introduction encourages visitors to participate and explains
+           the purpose of the form.  Accessible language is used so
+           beginners feel welcome. -->
+      <p>
+        We’d love to hear from you! Whether you have questions about getting
+        started, want to share your tennis journey or simply wish to connect
+        with other players, please fill out the form below.  Your submission
+        will help us build a supportive community.
+      </p>
+      <!-- Contact section with a heading and instructional text -->
+      <section>
+        <h2>Send Us a Message</h2>
+        <p class="form-info">All fields are required unless otherwise noted.</p>
+        <!-- Contact form.  The onsubmit attribute calls a JavaScript
+             function that toggles visibility classes instead of inline styles. -->
+        <form id="contact-form" action="#" onsubmit="return showMessage();">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+          <label for="skill">Skill Level</label>
+          <select id="skill" name="skill" required>
+            <option value="">Select your level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Tell us about your tennis experience or any questions you have"
+            required
+          ></textarea>
+
+          <button type="submit">Join Now</button>
+        </form>
+      </section>
+      <!-- Confirmation message initially hidden.  It becomes visible after
+           the form is submitted. -->
+      <p id="confirmation" class="form-info hidden">
+        Thank you for reaching out! We’ll be in touch soon.
+      </p>
+    </main>
+    <!-- Page footer remains consistent across the site. -->
+    <footer>
+      <p>&copy; 2026 Tennis&nbsp;Insights. Built for CSD&nbsp;112 Final Project.</p>
+    </footer>
+    <!-- Simple script toggles the visibility of the form and
+         confirmation message.  This beginner-friendly approach avoids
+         back-end processing but still provides feedback to the user. -->
+    <script>
+      function showMessage() {
+        // Hide the form by adding a CSS class and show the confirmation message
+        document.getElementById('contact-form').classList.add('hidden');
+        document.getElementById('confirmation').classList.remove('hidden');
+        return false; // Prevent default form submission
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,269 @@
+/*
+  Global stylesheet for the Tennis Insights site.
+  This file defines the visual presentation of all pages.
+  Colors are drawn from a classic tennis palette: deep court green
+  (#1B5E20), bright ball yellow (#FDD835), clean white (#FFFFFF) and
+  charcoal gray (#333333).  Properties are organized by element and
+  component for clarity.  Comments throughout explain the purpose
+  behind certain rules.
+*/
+
+/* Reset default margins on body to avoid unwanted whitespace */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif; /* use a clean sans-serif for body text */
+  line-height: 1.6; /* improve readability by increasing line spacing */
+  color: #333333;
+  background-color: #FFFFFF;
+}
+
+/* Header styling */
+header {
+  background-color: #1B5E20; /* deep tennis green */
+  color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow adds depth */
+  position: sticky; /* keep header visible on scroll */
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navigation list layout */
+nav ul {
+  list-style: none; /* remove default list bullets */
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* evenly space navigation links */
+  margin: 0;
+  padding: 15px 0; /* vertical padding for clickable area */
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none; /* remove underline on links */
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* smooth hover effect */
+}
+
+nav a:hover, nav a:focus {
+  background-color: #FDD835; /* bright tennis ball yellow on hover */
+  color: #1B5E20; /* dark text for contrast */
+}
+
+/* Hero section uses the court image as a background.  The overlay
+   defined with ::after makes text readable by darkening the image. */
+.hero {
+  position: relative;
+  background-image: url('../images/court.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* semi‑transparent overlay */
+  z-index: 0;
+}
+
+.hero h1, .hero p, .hero .cta-button {
+  position: relative;
+  z-index: 1; /* place text above the overlay */
+}
+
+/* Style the call to action button in the hero */
+.cta-button {
+  display: inline-block;
+  background-color: #FDD835;
+  color: #1B5E20;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover, .cta-button:focus {
+  background-color: #FFFFFF;
+  color: #1B5E20;
+}
+
+/* Main content area */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Apply serif typography and green color to all heading levels */
+h1, h2, h3 {
+  font-family: 'Times New Roman', Times, serif;
+  color: #1B5E20;
+  margin-top: 0;
+}
+
+section p, section li {
+  font-size: 1rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 20px auto;
+}
+
+/* Footer styling */
+footer {
+  background-color: #1B5E20;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Form styles used on the contact page */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+form input,
+form select,
+form textarea {
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  background-color: #1B5E20;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+form button:hover, form button:focus {
+  background-color: #FDD835;
+  color: #1B5E20;
+}
+
+/* Utility class for smaller text on the form page */
+.form-info {
+  font-size: 0.85rem;
+  color: #555555;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Utility class to hide elements without inline style */
+.hidden {
+  display: none;
+}
+
+/* Active state for navigation links */
+nav a.active {
+  background-color: #FDD835;
+  color: #1B5E20;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background-color: #FDD835;
+  color: #1B5E20;
+  padding: 10px 14px;
+  z-index: 2000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+}
+
+/* Focus styles for keyboard users */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #FDD835;
+  outline-offset: 2px;
+}
+
+/* Additional spacing and layout rules */
+main h1 {
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+}
+
+/* Feature image styling on the home page */
+.feature-image {
+  margin-top: 15px;
+}
+
+/* Card layout used on the home page */
+.card-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 250px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-left: 5px solid #FDD835;
+  border-radius: 4px;
+}
+
+/* Additional typography tweaks */
+body {
+  letter-spacing: 0.5px;
+  min-height: 100vh;
+  overflow-wrap: break-word;
+}

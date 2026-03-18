@@ -1,0 +1,99 @@
+<!--
+  Home page for the Tennis Insights website.
+  This project was created for an introductory HTML/CSS class.  It
+  demonstrates semantic markup, external styling, and a simple layout
+  suitable for beginners while meeting the assignment specifications.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page title appears in the browser tab -->
+    <title>Tennis Insights | Home</title>
+    <!-- Link to the external stylesheet.  Keeping styles in a separate file
+         helps with maintainability and keeps HTML markup clean. -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Skip link helps keyboard and screen reader users jump directly to the main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Main navigation -->
+    <header>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="pages/history.html">History</a></li>
+          <li><a href="pages/getting-started.html">Getting&nbsp;Started</a></li>
+          <li><a href="pages/training.html">Training&nbsp;&amp;&nbsp;Techniques</a></li>
+          <li><a href="pages/contact.html">Join&nbsp;the&nbsp;Community</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero section: uses a background image to create visual impact.
+         The overlay (defined in CSS) ensures text remains readable on
+         top of the photograph. -->
+    <section class="hero">
+      <h1>Discover the World of Tennis</h1>
+      <p>
+        Learn about the sport’s origins, pick up essential skills and gear, and
+        connect with a passionate community of players.
+      </p>
+      <!-- Call‑to‑action button directs users to the getting started page. -->
+      <a href="pages/getting-started.html" class="cta-button">Start Playing Today</a>
+    </section>
+
+    <main id="main-content">
+      <!-- Introduction section -->
+      <section>
+        <h2>Welcome to Tennis&nbsp;Insights</h2>
+        <p>
+          Our mission is to make tennis approachable for everyone. Whether you’re
+          completely new to the game or brushing up on the basics, this site
+          covers everything from the sport’s rich history to the equipment you
+          need and the techniques that will help you succeed on court.
+        </p>
+      </section>
+
+      <!-- Overview section using cards for a more polished look -->
+      <section>
+        <h2>What You’ll Learn</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>History</h3>
+            <p>Explore how tennis grew from medieval indoor games into the global sport we know today.</p>
+          </article>
+          <article class="card">
+            <h3>Getting Started</h3>
+            <p>Learn what equipment you need, how scoring works, and where to begin as a new player.</p>
+          </article>
+          <article class="card">
+            <h3>Training</h3>
+            <p>Build a strong foundation with basic strokes, footwork, and beginner‑friendly practice tips.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Why play tennis section provides motivation for visitors. -->
+      <section>
+        <h2>Why Play Tennis?</h2>
+        <p>
+          Tennis is a lifelong sport that promotes fitness, coordination and mental
+          sharpness. It can be enjoyed socially or competitively by players of all
+          ages and abilities. Grab a racquet and join the fun—your journey
+          starts here!
+        </p>
+        <!-- Inline image adds another local image to meet the five‑image requirement -->
+        <img src="images/court.jpg" alt="Outdoor tennis court ready for play" class="feature-image" />
+      </section>
+    </main>
+
+    <!-- Footer contains a copyright notice and could include additional
+         information like contact details.  Keeping footers consistent
+         across pages helps with usability. -->
+    <footer>
+      <p>&copy; 2026 Tennis&nbsp;Insights. Built for CSD&nbsp;112 Final Project.</p>
+    </footer>
+  </body>
+</html>
